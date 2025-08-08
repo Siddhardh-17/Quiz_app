@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Quiz App</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/script.js" defer></script>
 </head>
 <body>
-    <h1>Select a Quiz Category</h1>
-    <form action="/cgi-bin/quiz.cgi" method="GET">
-        <label><input type="radio" name="category" value="sports" required> Sports</label><br>
-        <label><input type="radio" name="category" value="movies"> Movies</label><br>
-        <label><input type="radio" name="category" value="current_affairs"> Current Affairs</label><br>
-        <label><input type="radio" name="category" value="politics"> Politics</label><br>
-        <label><input type="radio" name="category" value="wildlife"> Wildlife</label><br><br>
-        <input type="submit" value="Start Quiz">
-    </form>
+  <div class="container">
+    <header class="app-header">
+      <h1>Quiz App</h1>
+      <div class="header-sub">Choose a category and start — good luck!</div>
+    </header>
+
+    <div class="card">
+      <form action="/cgi-bin/quiz.cgi" method="GET">
+        <div class="options" style="gap:8px;">
+          <label class="option"><input type="radio" name="category" value="sports" required> <span>Sports</span></label>
+          <label class="option"><input type="radio" name="category" value="movies"> <span>Movies</span></label>
+          <label class="option"><input type="radio" name="category" value="current_affairs"> <span>Current Affairs</span></label>
+          <label class="option"><input type="radio" name="category" value="politics"> <span>Politics</span></label>
+          <label class="option"><input type="radio" name="category" value="wildlife"> <span>Wildlife</span></label>
+        </div>
+        <div style="margin-top:12px; display:flex; justify-content:flex-end;">
+          <button class="btn" type="submit">Start Quiz</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </body>
 </html>

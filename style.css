@@ -1,0 +1,147 @@
+/* style.css - simple modern styles for the quiz app */
+:root{
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #0ea5a3;
+  --accent-dark: #0b8f8b;
+  --danger: #ef4444;
+  --radius: 10px;
+  --maxw: 860px;
+  --gap: 14px;
+  --shadow: 0 6px 18px rgba(15,23,42,0.08);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  padding:32px;
+  background:linear-gradient(180deg,#eef2f7 0%,var(--bg) 100%);
+  color:#0f172a;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  min-height:100vh;
+  font-size:16px;
+}
+
+.container{
+  width:100%;
+  max-width:var(--maxw);
+}
+
+header.app-header{
+  margin-bottom:18px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+header h1{
+  margin:0;
+  font-size:22px;
+}
+.header-sub{
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* Card */
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:18px;
+  box-shadow:var(--shadow);
+  margin-bottom:var(--gap);
+}
+
+/* Notice */
+.notice{
+  color:var(--muted);
+  padding:12px;
+  background: #fff;
+  border-radius:8px;
+  border:1px solid #eef2f5;
+}
+
+/* Question card */
+.question-card{
+  margin-bottom:12px;
+  padding:14px;
+  border-radius:8px;
+  border:1px solid #eef2f5;
+  background:#fff;
+}
+.question-text{
+  margin:0 0 10px 0;
+  font-weight:600;
+}
+.options{ display:flex; flex-direction:column; gap:8px; }
+
+.option{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid transparent;
+  cursor:pointer;
+  transition:all .12s ease;
+  user-select:none;
+}
+.option:hover{ transform:translateY(-2px); box-shadow:0 4px 12px rgba(15,23,42,0.04); }
+.option input{ display:none; }
+
+/* style the label text */
+.option span{ display:block; color:#0f172a; }
+
+/* when radio is checked, style the label (input:checked + span won't work because input is inside label, so use :has if available; we also set .selected via JS) */
+.option.selected{
+  background: linear-gradient(90deg, rgba(14,165,163,0.06), rgba(11,143,139,0.02));
+  border-color: rgba(14,165,163,0.18);
+  box-shadow: 0 6px 18px rgba(14,165,163,0.06);
+}
+
+/* Actions */
+.actions{
+  display:flex;
+  justify-content:flex-end;
+  gap:12px;
+  margin-top:10px;
+}
+.btn{
+  background:var(--accent);
+  color:white;
+  border:none;
+  padding:10px 16px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:600;
+  box-shadow:none;
+}
+.btn.secondary{
+  background:transparent;
+  color:var(--muted);
+  border:1px solid #e6eef0;
+}
+
+/* results */
+.result{
+  font-size:20px;
+  font-weight:700;
+  margin:10px 0 18px;
+}
+.result-breakdown{
+  margin-top:8px;
+  color:var(--muted);
+}
+
+/* responsive */
+@media (max-width:600px){
+  body{ padding:18px; }
+  .container{ padding:0 6px; }
+  header h1{ font-size:18px; }
+}
