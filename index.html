@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz App</title>
+</head>
+<body>
+    <h1>Select a Quiz Category</h1>
+    <form action="/cgi-bin/quiz.cgi" method="GET">
+        <label><input type="radio" name="category" value="sports" required> Sports</label><br>
+        <label><input type="radio" name="category" value="movies"> Movies</label><br>
+        <label><input type="radio" name="category" value="current_affairs"> Current Affairs</label><br>
+        <label><input type="radio" name="category" value="politics"> Politics</label><br>
+        <label><input type="radio" name="category" value="wildlife"> Wildlife</label><br><br>
+        <input type="submit" value="Start Quiz">
+    </form>
+</body>
+</html>

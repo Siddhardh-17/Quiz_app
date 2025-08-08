@@ -1,0 +1,61 @@
+[quiz.cgi] Category received: sports
+[quiz.cgi] Number of questions loaded: 0
+[quiz.cgi] Display complete.
+
+[quiz.cgi] Start of program
+[quiz.cgi] Start of program
+[quiz.cgi] Starting
+Query string: category=sports
+Category selected: sports
+Questions loaded: 0
+No questions found in memory.
+HTML form rendered successfully
+[quiz.cgi] Starting
+Query string: category=sports
+Category selected: sports
+Questions loaded: 0
+No questions found in memory.
+HTML form rendered successfully
+[loadQuestions] Opening file: questions/sports.txt
+❌ Failed to open file: questions/sports.txt
+[quiz.cgi] Starting
+Query string: category=sports
+Category selected: sports
+Questions loaded: 0
+No questions found in memory.
+HTML form rendered successfully
+[loadQuestions] Opening file: questions/sports.txt
+❌ Failed to open file: questions/sports.txt
+[quiz.cgi] Starting
+Query string: category=sports
+Category selected: sports
+Questions loaded: 0
+No questions found in memory.
+HTML form rendered successfully
+Failed to open file: questions/sports.txt
+[quiz.cgi] Starting
+Query string: category=sports
+Category selected: sports
+Questions loaded: 0
+No questions found in memory.
+HTML form rendered successfully
+Received category: sports
+Failed to open file: questions/sports.txt
+Received category: sports
+Received category: sports
+Received category: movies
+Received category: current_affairs
+Received category: politics
+Received category: wildlife
+Received category: sports
+Received category: movies
+Received category: sports
+Received category: sports
+Received category: sports
+Received category: sports
+Received category: sports
+Received category: movies
+Received category: current_affairs
+Received category: politics
+Received category: politics
+Received category: wildlife
