@@ -1,12 +1,120 @@
-Which country won the ICC T20 World Cup in 2024?
+Which country hosted the 2024 Summer Olympics?
+USA
+France
+Japan
+Australia
+B
+Who is the current Secretary-General of the United Nations (as of 2025)?
+Ban Ki-moon
+António Guterres
+Kofi Annan
+Jens Stoltenberg
+B
+Which country recently joined BRICS in 2024?
+Saudi Arabia
+Argentina
+Indonesia
+Mexico
+A
+Which tech company developed ChatGPT?
+Microsoft
+Google
+OpenAI
+Amazon
+C
+Which country won the FIFA Women’s World Cup in 2023?
+USA
+Spain
+England
+Germany
+B
+What is the capital of Ukraine?
+Kyiv
+Moscow
+Warsaw
+Minsk
+A
+Which country is leading in global electric vehicle production?
+Germany
+China
+USA
+Japan
+B
+Who is the current Prime Minister of the United Kingdom (as of 2025)?
+Rishi Sunak
+Keir Starmer
+Boris Johnson
+Liz Truss
+A
+Which mission landed India’s Chandrayaan-3 on the Moon?
+2019
+2022
+2023
+2024
+C
+Which country launched the “Artemis” program to return humans to the Moon?
+Russia
+USA
+China
+India
+B
+What is the current population of India (approx. in 2025)?
+1.2 billion
+1.4 billion
+1.6 billion
+1.3 billion
+B
+Which cryptocurrency is considered the first in the world?
+Ethereum
+Dogecoin
+Bitcoin
+Litecoin
+C
+Which city will host Expo 2030?
+Riyadh
+Dubai
+Paris
+Tokyo
+A
+Who won the Nobel Peace Prize in 2024?
+UNICEF
+Narges Mohammadi
+Volodymyr Zelenskyy
+Greta Thunberg
+B
+Which social media platform rebranded itself as "X"?
+Instagram
+Facebook
+Twitter
+Snapchat
+C
+Which Asian country recently lifted its one-child policy?
+China
+Japan
+South Korea
+Vietnam
+A
+What is the tallest building in the world (as of 2025)?
+Shanghai Tower
+Burj Khalifa
+Jeddah Tower
+One World Trade Center
+B
+Which Indian state was the first to achieve 100% literacy?
+Kerala
+Goa
+Tamil Nadu
+Sikkim
+A
+Who won the ICC Men's T20 World Cup in 2024?
 India
 England
 Australia
-West Indies
+South Africa
 A
-Which company became the first to reach a $4 trillion market cap in 2025?
-Amazon
-Microsoft
-Apple
-Google
-C
+Which global event is held every year to discuss climate change?
+COP
+G20
+BRICS
+Davos Forum
+A

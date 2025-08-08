@@ -1,12 +1,120 @@
 Who is the current President of the United States (as of 2025)?
-Donald Trump
 Joe Biden
-Barack Obama
+Donald Trump
 Kamala Harris
+Ron DeSantis
 A
-Which country exited the European Union in 2020?
-Germany
+Which political party currently governs India (as of 2025)?
+BJP
+INC
+AAP
+CPI
+A
+What is the lower house of the Indian Parliament called?
+Rajya Sabha
+Lok Sabha
+Vidhan Sabha
+Senate
+B
+Who is the President of Russia (as of 2025)?
+Vladimir Putin
+Dmitry Medvedev
+Alexei Navalny
+Sergey Lavrov
+A
+Which country has the oldest written constitution still in use?
+USA
+UK
 France
-United Kingdom
-Italy
+India
+A
+What is the main political ideology of the Communist Party?
+Capitalism
+Socialism
+Communism
+Anarchism
 C
+Which Indian Prime Minister implemented the Emergency in 1975?
+Indira Gandhi
+Rajiv Gandhi
+Jawaharlal Nehru
+Morarji Desai
+A
+What does NATO stand for?
+North Asian Treaty Organization
+North Atlantic Treaty Organization
+National Atlantic Trade Organization
+Northern Alliance Treaty Organization
+B
+Who was the first woman Prime Minister of the UK?
+Margaret Thatcher
+Theresa May
+Liz Truss
+Queen Elizabeth II
+A
+Which country recently legalized same-sex marriage in 2024?
+India
+Japan
+Thailand
+South Korea
+C
+What is the tenure of the President of India?
+4 years
+5 years
+6 years
+7 years
+B
+Which African country was formerly known as Rhodesia?
+Zimbabwe
+Zambia
+Namibia
+Botswana
+A
+What is the main law-making body in the USA?
+Parliament
+Congress
+Senate
+House of Representatives
+B
+Who appoints the Chief Justice of India?
+President
+Prime Minister
+Parliament
+Governor
+A
+Which country follows the policy of "One country, two systems"?
+Japan
+China
+Taiwan
+Singapore
+B
+Who was India’s first President?
+Rajendra Prasad
+S. Radhakrishnan
+Zakir Hussain
+V. V. Giri
+A
+What is the minimum age to become the President of India?
+30
+35
+40
+45
+B
+Which country has the largest democracy in the world?
+USA
+India
+UK
+Brazil
+B
+Which amendment to the US Constitution gave women the right to vote?
+18th
+19th
+20th
+21st
+B
+Who was the British Prime Minister during World War II?
+Winston Churchill
+Neville Chamberlain
+Clement Attlee
+Harold Macmillan
+A

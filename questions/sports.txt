@@ -10,3 +10,111 @@ Football
 Tennis
 Cricket
 B
+Which country hosts the Wimbledon tennis tournament?
+France
+USA
+UK
+Australia
+C
+In which sport would you perform a slam dunk?
+Basketball
+Football
+Hockey
+Tennis
+A
+How many players are there in a cricket team?
+9
+10
+11
+12
+C
+Which sport uses a shuttlecock?
+Badminton
+Table Tennis
+Squash
+Volleyball
+A
+In which sport is the term "love" used?
+Hockey
+Basketball
+Tennis
+Golf
+C
+Which country has won the most Olympic gold medals in total?
+USA
+Russia
+China
+Germany
+A
+What is the highest possible break in snooker?
+147
+150
+155
+160
+A
+Which sport is Michael Jordan famous for?
+Football
+Basketball
+Baseball
+Hockey
+B
+Which country won the Cricket World Cup in 2019?
+India
+Australia
+England
+New Zealand
+C
+What is the national sport of Japan?
+Sumo Wrestling
+Karate
+Judo
+Baseball
+A
+How long is a marathon?
+26.2 miles
+25 miles
+20 miles
+30 miles
+A
+Which sport is played at Augusta National Golf Club?
+Golf
+Tennis
+Cricket
+Polo
+A
+Which country is known for the haka dance in rugby?
+Australia
+New Zealand
+Fiji
+South Africa
+B
+How many sets are played in a standard tennis match (men's Grand Slam)?
+3
+4
+5
+6
+C
+Which athlete is known as "The fastest man alive"?
+Michael Phelps
+Usain Bolt
+Carl Lewis
+Tyson Gay
+B
+What shape is a soccer ball traditionally?
+Hexagon
+Pentagon
+Sphere
+Combination of Hexagons and Pentagons
+D
+What is the diameter of a basketball hoop in inches?
+18
+20
+16
+22
+A
+Which country has won the most FIFA World Cups?
+Germany
+Brazil
+Italy
+Argentina
+B
