@@ -1,147 +1,228 @@
-/* style.css - simple modern styles for the quiz app */
+/* style.css — gorgeous animated background + cards + progress + responsive */
 :root{
-  --bg: #f6f8fb;
-  --card: #ffffff;
-  --muted: #6b7280;
-  --accent: #0ea5a3;
-  --accent-dark: #0b8f8b;
-  --danger: #ef4444;
-  --radius: 10px;
-  --maxw: 860px;
-  --gap: 14px;
-  --shadow: 0 6px 18px rgba(15,23,42,0.08);
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --bg-dark: #071226;
+  --bg-mid: #0f2a44;
+  --card: rgba(255,255,255,0.98);
+  --glass: rgba(255,255,255,0.06);
+  --muted: #9aa6b2;
+  --accent: #06b6d4; /* cyan-teal */
+  --accent-2: #7c3aed; /* purple */
+  --accent-3: #f97316; /* orange */
+  --radius: 14px;
+  --shadow-1: 0 12px 40px rgba(2,6,23,0.45);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
-*{box-sizing:border-box}
-body{
+/* Full-screen animated gradient background */
+html,body{
+  height:100%;
   margin:0;
-  padding:32px;
-  background:linear-gradient(180deg,#eef2f7 0%,var(--bg) 100%);
-  color:#0f172a;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
+}
+body{
+  background: linear-gradient(120deg, var(--bg-dark), var(--bg-mid));
+  color: #0f172a;
+  min-height:100vh;
   display:flex;
   justify-content:center;
   align-items:flex-start;
-  min-height:100vh;
-  font-size:16px;
+  padding:40px 20px;
+  overflow-y:auto;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 
+/* animated shifting radial lights */
+.background-lights{
+  position:fixed;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+}
+.light{
+  position:absolute;
+  width:520px;
+  height:520px;
+  border-radius:50%;
+  filter: blur(80px);
+  opacity:0.16;
+  animation: floatSlow 12s ease-in-out infinite;
+  mix-blend-mode: screen;
+}
+.light.p1{ background: radial-gradient(circle,#7c3aed 0%, transparent 60%); left:-120px; top:-80px; animation-duration:18s; transform:rotate(8deg);}
+.light.p2{ background: radial-gradient(circle,#06b6d4 0%, transparent 60%); right:-140px; top:60px; animation-duration:14s;}
+.light.p3{ background: radial-gradient(circle,#f97316 0%, transparent 60%); left:20%; bottom:-160px; animation-duration:20s; opacity:0.12;}
+@keyframes floatSlow{
+  0%{ transform:translateY(0) scale(1); }
+  50%{ transform:translateY(-30px) scale(1.06); }
+  100%{ transform:translateY(0) scale(1); }
+}
+
+/* subtle animated grid overlay */
+.grid {
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.01) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.35;
+  z-index: 0;
+  pointer-events: none;
+  transform: translateZ(0);
+}
+
+/* outer container */
 .container{
+  z-index:1;
   width:100%;
-  max-width:var(--maxw);
+  max-width:1100px;
 }
 
+/* Header */
 header.app-header{
-  margin-bottom:18px;
   display:flex;
   justify-content:space-between;
   align-items:center;
   gap:12px;
+  margin-bottom:18px;
+  color:white;
 }
 header h1{
   margin:0;
-  font-size:22px;
+  font-size:26px;
+  letter-spacing:0.2px;
 }
 .header-sub{
-  color:var(--muted);
+  color:rgba(255,255,255,0.75);
   font-size:14px;
 }
 
-/* Card */
+/* card */
 .card{
-  background:var(--card);
-  border-radius:var(--radius);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.02));
+  border-radius: var(--radius);
   padding:18px;
-  box-shadow:var(--shadow);
-  margin-bottom:var(--gap);
+  box-shadow: var(--shadow-1);
+  backdrop-filter: blur(8px) saturate(110%);
+  border: 1px solid rgba(255,255,255,0.04);
+  color: #e6eef6;
 }
 
-/* Notice */
-.notice{
-  color:var(--muted);
-  padding:12px;
-  background: #fff;
-  border-radius:8px;
-  border:1px solid #eef2f5;
-}
-
-/* Question card */
-.question-card{
-  margin-bottom:12px;
-  padding:14px;
-  border-radius:8px;
-  border:1px solid #eef2f5;
-  background:#fff;
-}
-.question-text{
-  margin:0 0 10px 0;
-  font-weight:600;
-}
-.options{ display:flex; flex-direction:column; gap:8px; }
-
+/* choices on home card */
+.options{ display:flex; gap:12px; flex-wrap:wrap; }
 .option{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  padding:12px 18px;
+  border-radius:12px;
+  cursor:pointer;
+  border:1px solid rgba(255,255,255,0.04);
   display:flex;
   align-items:center;
   gap:10px;
-  padding:10px 12px;
-  border-radius:8px;
-  border:1px solid transparent;
-  cursor:pointer;
-  transition:all .12s ease;
-  user-select:none;
+  transition: transform .14s ease, box-shadow .14s ease, background .14s ease;
+  color:white;
 }
-.option:hover{ transform:translateY(-2px); box-shadow:0 4px 12px rgba(15,23,42,0.04); }
+.option:hover{ transform: translateY(-6px); box-shadow: 0 20px 40px rgba(2,6,23,0.5); }
 .option input{ display:none; }
 
-/* style the label text */
-.option span{ display:block; color:#0f172a; }
+/* Question card (quiz page) */
+.question-card{
+  margin-bottom:14px;
+  padding:16px;
+  border-radius:12px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+  border:1px solid rgba(255,255,255,0.03);
+  transform-origin:center;
+  opacity:0;
+  transform: translateY(14px) scale(0.995);
+  animation: cardIn .5s forwards;
+  will-change: transform, opacity;
+}
+@keyframes cardIn {
+  to { opacity:1; transform: translateY(0) scale(1); }
+}
 
-/* when radio is checked, style the label (input:checked + span won't work because input is inside label, so use :has if available; we also set .selected via JS) */
+/* Question title */
+.question-text{
+  margin:0 0 10px 0;
+  color: #f8fafc;
+  font-weight:700;
+  font-size:16px;
+}
+
+/* Options list */
+.options{ display:flex; flex-direction:column; gap:10px; }
+.option{ 
+  border:1px solid rgba(255,255,255,0.04);
+  padding:12px;
+  align-items:flex-start;
+}
+.option span{
+  color: #e6eef6;
+}
+
+/* selected */
 .option.selected{
-  background: linear-gradient(90deg, rgba(14,165,163,0.06), rgba(11,143,139,0.02));
-  border-color: rgba(14,165,163,0.18);
-  box-shadow: 0 6px 18px rgba(14,165,163,0.06);
+  border-color: rgba(6,182,212,0.18);
+  background: linear-gradient(90deg, rgba(6,182,212,0.06), rgba(124,58,237,0.02));
+  box-shadow: 0 8px 30px rgba(6,22,34,0.45);
 }
 
-/* Actions */
-.actions{
-  display:flex;
-  justify-content:flex-end;
-  gap:12px;
-  margin-top:10px;
+/* progress bar */
+.progress-wrap{
+  height:12px;
+  width:100%;
+  background:linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+  border-radius:999px;
+  margin-bottom:14px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,0.03);
 }
+.progress-fill{
+  height:100%;
+  width:0%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  transition: width .4s cubic-bezier(.2,.9,.2,1);
+  box-shadow: 0 6px 20px rgba(124,58,237,0.12);
+}
+
+/* actions */
+.actions{ display:flex; justify-content:flex-end; gap:12px; margin-top:10px; }
 .btn{
-  background:var(--accent);
+  background: linear-gradient(90deg,var(--accent),var(--accent-2));
   color:white;
-  border:none;
   padding:10px 16px;
   border-radius:10px;
+  border:none;
   cursor:pointer;
-  font-weight:600;
-  box-shadow:none;
+  font-weight:700;
+  box-shadow: 0 10px 30px rgba(12,22,34,0.4);
+  transition: transform .12s ease, box-shadow .12s ease;
 }
+.btn:hover{ transform: translateY(-4px); box-shadow: 0 20px 60px rgba(12,22,34,0.55); }
 .btn.secondary{
-  background:transparent;
-  color:var(--muted);
-  border:1px solid #e6eef0;
+  background: transparent;
+  color: #e6eef6;
+  border:1px solid rgba(255,255,255,0.06);
 }
 
 /* results */
-.result{
-  font-size:20px;
-  font-weight:700;
-  margin:10px 0 18px;
-}
-.result-breakdown{
-  margin-top:8px;
-  color:var(--muted);
+.result{ font-size:22px; font-weight:800; color: #e6eef6; margin:8px 0; }
+.result-breakdown{ color:var(--muted); margin-top:8px; }
+
+/* canvas confetti on top */
+#confetti-canvas{
+  position:fixed;
+  left:0; top:0; width:100%; height:100%;
+  pointer-events:none;
+  z-index:9999;
 }
 
+/* footer area spacing small */
+.footer-note{ color:rgba(230,238,246,0.6); font-size:13px; margin-top:12px; }
+
 /* responsive */
-@media (max-width:600px){
-  body{ padding:18px; }
-  .container{ padding:0 6px; }
-  header h1{ font-size:18px; }
+@media (max-width:800px){
+  body{ padding:24px 12px; }
+  .question-text{ font-size:15px; }
+  .card{ padding:14px; }
+  header h1{ font-size:20px; }
 }

@@ -14,12 +14,11 @@ struct Question {
 };
 
 class Quiz {
-private:
-    std::vector<Question> questions;
-
-public:
-    void loadQuestions(const std::string& category);
-    const std::vector<Question>& getQuestions() const;
+    private:
+        std::vector<Question> questions;
+    public:
+        void loadQuestions(const std::string& category);
+            const std::vector<Question>& getQuestions() const;
 };
 
 #endif

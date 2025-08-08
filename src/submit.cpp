@@ -25,7 +25,6 @@ int main() {
     std::map<std::string, std::string> answers = parseFormData();
     std::string category = answers["category"];
 
-    // debug
     std::ofstream dbg("/tmp/debug_log.txt", std::ios::app);
     dbg << "[submit.cgi] Category: " << category << "\n";
     dbg.close();
@@ -44,10 +43,17 @@ int main() {
     }
 
     std::cout << "<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>";
-    std::cout << "<title>Results</title><link rel='stylesheet' href='/style.css'></head><body><div class='container'>";
-    std::cout << "<div class='card'><h1>Results</h1>";
-    std::cout << "<p class='result'>Your Score: " << score << " out of " << questions.size() << "</p>";
-    std::cout << "<p class='result-breakdown'><a href='/index.html' class='btn secondary'>Back to Home</a></p>";
-    std::cout << "</div></div></body></html>";
+    std::cout << "<title>Results</title>";
+    std::cout << "<link rel='stylesheet' href='/style.css'>";
+    // script will fire confetti when .result exists
+    std::cout << "<script src='/script.js' defer></script>";
+    std::cout << "</head><body>";
+    std::cout << "<div class='container'><div class='card'>";
+    std::cout << "<h1 class='result'>Your Score: " << score << " / " << questions.size() << "</h1>";
+    std::cout << "<p class='result-breakdown'>Category: " << category << "</p>";
+    std::cout << "<p class='result-breakdown'><a class='btn secondary' href='/index.html'>Back to Home</a> <a class='btn' href='/cgi-bin/quiz.cgi?category=" << category << "'>Try Again</a></p>";
+    std::cout << "</div></div>";
+    // confetti canvas will be injected by script.js
+    std::cout << "</body></html>";
     return 0;
 }
